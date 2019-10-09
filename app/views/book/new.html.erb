@@ -1,0 +1,10 @@
+<h1> Create new book </h1>
+<%= form_tag :action => 'create' do %>
+    <p><label for='book_title'> Title </label>:
+    <%= text_field 'books', 'title' %></p><br />
+
+    <p><label for='book_subject_id'> Subject Id </label>:
+    <%= text_field 'books', 'subject_id' %></p>
+
+    <%= submit_tag 'Create' %>
+<% end -%>

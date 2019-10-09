@@ -1,0 +1,14 @@
+<% if @books.blank? %>
+    <p> No books available </p>
+<% else %>
+    <div>
+        <p> These are the books </p>
+        <ul id = "books">
+            <% @books.each do |book| %>
+                <li> <%= link_to book.title, "delete?id=#{book.id}", method: :delete %> </li>
+            <% end %>
+        </ul>
+        <%= will_paginate @books %>
+    </div>
+<% end %>
+<p> <%= link_to "add new book", {:action => "new"} %> </p>

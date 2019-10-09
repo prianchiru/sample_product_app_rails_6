@@ -1,0 +1,3 @@
+      invoke  active_record
+      remove    db/migrate/20191002135834_add_test2_to_books.rb
+      create    db/migrate/20191002135924_add_test2_to_books.rb
